@@ -27,6 +27,11 @@ export const NavInnerContainer = styled.div`
     height: 80px;
     display: flex;
 `;
+
+export const NavLinkContainer = styled.div`
+    display: flex;
+`
+
 export const NavDroppedDownContainer = styled.div`
 
 `;

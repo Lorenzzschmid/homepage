@@ -5,13 +5,21 @@ import {
   NavbarContainer, 
   NavInnerContainer, 
   NavDroppedDownContainer,
+  NavLinkContainer,
 } from '../Nav/Nav.Style'; 
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
   <NavbarContainer>
     <NavInnerContainer>
-      <NavLeftContainer></NavLeftContainer>
+      <NavLeftContainer>
+        <NavLinkContainer>
+          <Link to='/'>Home</Link>
+
+        </NavLinkContainer>
+
+      </NavLeftContainer>
       <NavRightContainer></NavRightContainer>
     </NavInnerContainer>
     <NavDroppedDownContainer></NavDroppedDownContainer>
