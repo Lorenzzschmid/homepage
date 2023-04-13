@@ -1,9 +1,9 @@
 import React from 'react'
+import { NavbarContainer } from '../Nav/Nav.Style'; 
 
 const Nav = () => {
-  return (
-    <div>Hellouu</div>
-  )
+  return <NavbarContainer>
+  </NavbarContainer>
 }
 
 export default Nav
