@@ -35,6 +35,9 @@ export const NavInnerContainer = styled.div`
 
 export const NavLinkContainer = styled.div`
     display: flex;
+    height: 100%;
+    align-items: center;
+    width: 30rem;
 `
 
 export const NavbarLink = styled(Link)`
@@ -45,6 +48,15 @@ export const NavbarLink = styled(Link)`
     margin: 10px;
     @media (max-width: 700px) {
         display: none;
+    }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    :hover {
+        background-color: #4C73AD;
+        padding: 0;
     }
 `
 export const NavbarLinkExtended = styled(Link)`
