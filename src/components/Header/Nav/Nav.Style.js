@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled.nav`
     width: 100%;
-    height: 80px;
+    height: ${(props) => (props.extendDropdown ? "100vh" : "80px")};
     background-color: #2B4061;
     display: flex;
     flex-direction: column;
@@ -44,6 +44,13 @@ export const NavbarLink = styled(Link)`
         display: none;
     }
 `
+export const NavbarLinkExtended = styled(Link)`
+    color: #AAC2E6;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin: 10px;
+`
 
 export const Logo = styled.img`
     margin: 10px;
@@ -65,5 +72,11 @@ export const OpenLinksButton = styled.button`
 `
 
 export const NavDroppedDownContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    @media (min-width: 700px) {
+        display: none; 
+    }
 `;

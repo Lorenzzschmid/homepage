@@ -9,6 +9,7 @@ import {
   NavbarLink,
   Logo,
   OpenLinksButton,
+  NavbarLinkExtended,
 } from '../Nav/Nav.Style'; 
 import LogoImg from '../../../assets/logo.png'; 
 
@@ -17,7 +18,7 @@ const Nav = () => {
   const [ toggleOpen, setToggleOpen ] = useState(false); 
 
   return (
-  <NavbarContainer>
+  <NavbarContainer extendDropdown={toggleOpen}>
     <NavInnerContainer>
       <NavLeftContainer>
         <NavLinkContainer>
@@ -27,9 +28,7 @@ const Nav = () => {
           <NavbarLink to='/'>Contact</NavbarLink>
           <OpenLinksButton onClick={() => {
             setToggleOpen((curr) => !curr)
-            }}>
-            
-            {toggleOpen ? <>&#10005;</> : <>&#8801;</>}</OpenLinksButton>
+            }}>{toggleOpen ? <>&#10005;</> : <>&#8801;</>}</OpenLinksButton>
         </NavLinkContainer>
 
       </NavLeftContainer>
@@ -37,7 +36,14 @@ const Nav = () => {
         <Logo src={LogoImg}></Logo>
       </NavRightContainer>
     </NavInnerContainer>
-    <NavDroppedDownContainer></NavDroppedDownContainer>
+    {toggleOpen && 
+      <NavDroppedDownContainer>
+          <NavbarLinkExtended to='/'>Home</NavbarLinkExtended>
+            <NavbarLinkExtended to='/'>About</NavbarLinkExtended>
+            <NavbarLinkExtended to='/'>Projects</NavbarLinkExtended>
+            <NavbarLinkExtended to='/'>Contact</NavbarLinkExtended>
+        </NavDroppedDownContainer>
+    }
   </NavbarContainer>
   )
 }
