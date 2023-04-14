@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { 
   NavLeftContainer, 
   NavRightContainer, 
@@ -6,21 +6,36 @@ import {
   NavInnerContainer, 
   NavDroppedDownContainer,
   NavLinkContainer,
+  NavbarLink,
+  Logo,
+  OpenLinksButton,
 } from '../Nav/Nav.Style'; 
-import { Link } from 'react-router-dom';
+import LogoImg from '../../../assets/logo.png'; 
 
 const Nav = () => {
+
+  const [ toggleOpen, setToggleOpen ] = useState(false); 
+
   return (
   <NavbarContainer>
     <NavInnerContainer>
       <NavLeftContainer>
         <NavLinkContainer>
-          <Link to='/'>Home</Link>
-
+          <NavbarLink to='/'>Home</NavbarLink>
+          <NavbarLink to='/'>About</NavbarLink>
+          <NavbarLink to='/'>Projects</NavbarLink>
+          <NavbarLink to='/'>Contact</NavbarLink>
+          <OpenLinksButton onClick={() => {
+            setToggleOpen((curr) => !curr)
+            }}>
+            
+            {toggleOpen ? <>&#10005;</> : <>&#8801;</>}</OpenLinksButton>
         </NavLinkContainer>
 
       </NavLeftContainer>
-      <NavRightContainer></NavRightContainer>
+      <NavRightContainer>
+        <Logo src={LogoImg}></Logo>
+      </NavRightContainer>
     </NavInnerContainer>
     <NavDroppedDownContainer></NavDroppedDownContainer>
   </NavbarContainer>
