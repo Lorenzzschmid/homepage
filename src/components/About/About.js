@@ -1,9 +1,19 @@
 import React from 'react'
+import { 
+  AboutContainer, 
+  TimelineContainer,
+  StartElement,
+} from './AboutStyles'
+
 
 const About = () => {
   return (
-    <div>About</div>
-  )
+  <AboutContainer>
+    <TimelineContainer>
+      <StartElement></StartElement>
+    </TimelineContainer>
+  </AboutContainer>)
+
 }
 
 export default About

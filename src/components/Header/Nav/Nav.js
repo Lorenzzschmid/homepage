@@ -23,9 +23,9 @@ const Nav = () => {
       <NavLeftContainer>
         <NavLinkContainer>
           <NavbarLink to='/'>Home</NavbarLink>
-          <NavbarLink to='/'>About</NavbarLink>
-          <NavbarLink to='/'>Projects</NavbarLink>
-          <NavbarLink to='/'>Contact</NavbarLink>
+          <NavbarLink to='/about'>About</NavbarLink>
+          <NavbarLink to='/projects'>Projects</NavbarLink>
+          <NavbarLink to='/contact'>Contact</NavbarLink>
           <OpenLinksButton onClick={() => {
             setToggleOpen((curr) => !curr)
             }}>{toggleOpen ? <>&#10005;</> : <>&#8801;</>}</OpenLinksButton>
