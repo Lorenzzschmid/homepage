@@ -1,16 +1,21 @@
 import React, { useState } from 'react'
 import {
-  ContactContainer, FormContainer,
+  ContactContainer, 
+  FormContainer, 
+  InputName,
+  InputLastName, 
+  FormSubmit,
+  FormTextArea,
 } from './ContactStyles'; 
 
 const Contact = () => {
   return (
     <ContactContainer>
       <FormContainer>
-          <input className='input' type='text' name='name' placeholder='Name' />
-          <input className='input' type='text' name='name' placeholder='Last Name' />
-          <textarea className='text' placeholder='Write me anything!' />
-          <input className='button' type='submit' value='Submit' />
+         <InputName placeholder='Name'></InputName>
+         <InputLastName placeholder='Last Name'></InputLastName>
+         <FormTextArea placeholder='Your Message!'></FormTextArea>
+         <FormSubmit>Submit</FormSubmit>
       </FormContainer>
     </ContactContainer>
   )
