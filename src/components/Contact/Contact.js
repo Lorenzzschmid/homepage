@@ -11,6 +11,17 @@ const Contact = () => {
   const [email, setEmail] = useState(""); 
   const [message, setMessage] = useState(""); 
 
+  const emailValidation = () => {
+    const regEx=/[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g
+    if(regEx.test(email)) {
+      setMessage('Email is Valid'); 
+    } else if(!regEx.test(email) && email !== '') {
+      setMessage('Email Is Not Valid'); 
+    }else {
+      setMessage(''); 
+    }
+  }; 
+
   const handleOnChange = (e) => {
     setEmail(e.target.value); 
     console.log(setEmail)
@@ -27,7 +38,8 @@ const Contact = () => {
          <Input placeholder='E-Mail' type='email' name='email' value={email} onChange={handleOnChange} />
 
          <FormTextArea placeholder='Your Message!'></FormTextArea>
-         <FormSubmit>Submit</FormSubmit>
+         <FormSubmit onClick={emailValidation}>Submit</FormSubmit>
+         {message}
       </FormContainer>
     </ContactContainer>
     </>
