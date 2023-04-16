@@ -5,6 +5,8 @@ import {
   Input,
   FormSubmit,
   FormTextArea,
+  ContactInfoContainer,
+  PersonalInfoBox,
 } from './ContactStyles'; 
 
 const Contact = () => {
@@ -27,10 +29,20 @@ const Contact = () => {
     console.log(setEmail)
   }
 
+  const infoText = [ 
+    "Lorenz", 
+    "Schmid", 
+    "Programmer", 
+    "Based in Berlin"  
+  ]
+
   return (
     <>
 
     <ContactContainer>
+      <ContactInfoContainer>
+      <PersonalInfoBox>{infoText.map((item) => <p>{item}</p>)}</PersonalInfoBox>
+      </ContactInfoContainer>
       <FormContainer>
         <h2>Write Me</h2>
          <Input placeholder='Name' type='text' name='name'/>
