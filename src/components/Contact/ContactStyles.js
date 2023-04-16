@@ -19,15 +19,7 @@ export const FormContainer = styled.form`
     justify-content: space-evenly;
 
 `
-export const InputName = styled.input`
-    width: 30rem;
-    height: 3rem;
-    background-color: #AAC2E6;
-    text-align: center;
-    font-size: 1.5rem;
-    border-radius: 0.5rem;
-`
-export const InputLastName = styled.input`
+export const Input = styled.input`
     width: 30rem;
     height: 3rem;
     background-color: #AAC2E6;
@@ -53,3 +45,10 @@ export const FormTextArea = styled.textarea`
         font-size: 1.5rem;
         border-radius: 0.5rem;
     `
+    export const FieldSet = styled.fieldset`
+    
+    `
+    export const FormError = styled.div`
+    
+    `
+
