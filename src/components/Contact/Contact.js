@@ -9,9 +9,11 @@ import {
 
 const Contact = () => {
   const [email, setEmail] = useState(""); 
+  const [message, setMessage] = useState(""); 
 
-  const handleOnChange = () => {
-    
+  const handleOnChange = (e) => {
+    setEmail(e.target.value); 
+    console.log(setEmail)
   }
 
   return (
